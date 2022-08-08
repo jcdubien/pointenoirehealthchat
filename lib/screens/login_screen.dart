@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
+  static String id = 'login_screen';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -18,17 +20,17 @@ class _LoginScreenState extends State<LoginScreen> {
           children: <Widget>[
             Container(
               height: 200.0,
-              child: Image.asset('images/logo.png'),
+              child: Image.asset('images/logo_msp_sans_back.png'),
             ),
-            SizedBox(
+            const SizedBox(
               height: 48.0,
             ),
             TextField(
               onChanged: (value) {
                 //Do something with the user input.
               },
-              decoration: InputDecoration(
-                hintText: 'Enter your email',
+              decoration: const InputDecoration(
+                hintText: 'Entrez votre email',
                 contentPadding:
                 EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
@@ -36,25 +38,25 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderSide:
-                  BorderSide(color: Colors.lightBlueAccent, width: 1.0),
+                  BorderSide(color: Colors.green, width: 1.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide:
-                  BorderSide(color: Colors.lightBlueAccent, width: 2.0),
+                  BorderSide(color: Colors.green, width: 2.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             TextField(
               onChanged: (value) {
                 //Do something with the user input.
               },
-              decoration: InputDecoration(
-                hintText: 'Enter your password.',
+              decoration: const InputDecoration(
+                hintText: 'Entrez votre mot de passe.',
                 contentPadding:
                 EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
                 border: OutlineInputBorder(
@@ -62,12 +64,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 enabledBorder: OutlineInputBorder(
                   borderSide:
-                  BorderSide(color: Colors.lightBlueAccent, width: 1.0),
+                  BorderSide(color: Colors.green, width: 1.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide:
-                  BorderSide(color: Colors.lightBlueAccent, width: 2.0),
+                  BorderSide(color: Colors.green, width: 2.0),
                   borderRadius: BorderRadius.all(Radius.circular(32.0)),
                 ),
               ),
@@ -78,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
-                color: Colors.lightBlueAccent,
+                color: Colors.green,
                 borderRadius: BorderRadius.all(Radius.circular(30.0)),
                 elevation: 5.0,
                 child: MaterialButton(
@@ -87,8 +89,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   minWidth: 200.0,
                   height: 42.0,
-                  child: Text(
-                    'Log In',
+                  child: const Text(
+                    'Je me connecte',
                   ),
                 ),
               ),

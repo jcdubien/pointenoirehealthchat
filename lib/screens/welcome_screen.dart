@@ -1,6 +1,10 @@
+import 'package:PointeNoireChat/screens/login_screen.dart';
+import 'package:PointeNoireChat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatefulWidget {
+  static String id = 'welcome_screen';
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
@@ -19,16 +23,41 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Row(
               children: <Widget>[
                 Container(
-                  child: Image.asset('images/logo.png'),
-                  height: 60.0,
+                  child: Image.asset('images/logo_msp_sans_back.png',fit: BoxFit.fitWidth,),
+                  width: 80.0,
+                  height: 80.0,
                 ),
-                const Text(
-                  'Flash Chat',
-                  style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.black,
-                  ),
+                SizedBox(width: 30.0,),
+                Column(
+                  children: const [
+                    Text(
+                      'Maison de Santé',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.black,
+                      ),
+                    ),
+                    SizedBox(height: 10.0,),
+                    Text(
+                      'Pluri-Professionnelle',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.black,
+                      ),
+                    ),
+                    SizedBox(height: 10.0,),
+                    Text(
+                      'Côte Sous Le Vent',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -39,16 +68,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
                 elevation: 5.0,
-                color: Colors.lightBlueAccent,
+                color: Colors.green,
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
-                    //Go to login screen.
+                    Navigator.pushNamed(context, LoginScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
                   child: const Text(
-                    'Log In',
+                    'Je me connecte',
                   ),
                 ),
               ),
@@ -56,17 +85,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
-                color: Colors.blueAccent,
+                color: Colors.orangeAccent,
                 borderRadius: BorderRadius.circular(30.0),
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    //Go to registration screen.
+                    Navigator.pushNamed(context, RegistrationScreen.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
                   child: const Text(
-                    'Register',
+                    'Je m\'inscris',
                   ),
                 ),
               ),
